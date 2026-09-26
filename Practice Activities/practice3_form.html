@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Rene Baterbonia">
+            <br>
+            <br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="1234-567-890">
+            <p>Format: 1234-567-890</p>
+        </fieldset>
+    </form> 
+    <form>  
+        <label for="pk-choice">Choice a Pokemon</label>
+        <input list="pk-opts" id="pk-choice" name="pk-choice">
+        <datalist id="pk-opts">
+            <option value="Pikachu">   
+            <option value="Jiggypuff">
+            <option value="Squirtle">   
+            <option value="Psyduck">  
+        </datalist>
+
+    </form>
+    
+    <form>
+        <label for="colors2">Colors:</label>
+        <input list="colors2" id="color-choice" name="colors2">
+        <datalist id="colors2">
+            <option value="Red">
+            <option value="Blue">
+            <option value="Green">
+            <option value="Yellow">
+        </datalist>
+
+    </form>  
+
+    <label for="colors2">Colors:</label>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Click me, Rene!</button>
+    
+    <form method="post" action>
+
+    </form>
+
+    </form>
+</body>
+</html>
