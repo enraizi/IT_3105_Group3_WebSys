@@ -3,53 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Practice Activity 3: HTML Forms</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Practice Activity 3: HTML Forms</h1>
     <form>
         <fieldset>
-            <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" placeholder="Juan Dela Cruz">
+            <legend>Personal Information</legend>
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Juan Dela Cruz">
+                <br>
+                <br>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="1234-567-890">
+                <p>Format: 1234-567-890</p>
+                <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday"><br><br>
+            <label for="gender">Gender:</label>
             <br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
             <br>
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="1234-567-890">
-            <p>Format: 1234-567-890</p>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="juandelacruz99@gmail.com"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <label for="file">File:</label>
+            <input type="file" id="file" name="file" accept=".pdf"><br><br>
+            <label for="ad-choice">Program: </label>
+                <input list="ad-opts" id="ad-choice" name="ad-choice">
+                <datalist id="ad-opts">
+                    <option value="Information Technology">   
+                    <option value="Computer Science">
+                    <option value="Civil Engineering">   
+                    <option value="Computer Engineering">  
+                </datalist>
         </fieldset>
- 
-   
-        <label for="pk-choice">Choose a Pokemon</label>
-        <input list="pk-opts" id="pk-choice" name="pk-choice">
-        <datalist id="pk-opts">
-            <option value="Pikachu">   
-            <option value="Jiggypuff">
-            <option value="Squirtle">   
-            <option value="Psyduck">  
-        </datalist>
+        <br>    
+        <fieldset>
+            <legend>Feedback</legend>
+                <label for="suggestion">Suggestions:</label>   
+                <input type="textarea" id="suggestion" name="suggestion" placeholder="Input suggestion here..."></input>
 
-   
-    
-  
-        <label for="colors2">Colors:</label>
-        <input list="colors2" id="color-choice" name="colors2">
-        <datalist id="colors2">
-            <option value="Red">
-            <option value="Blue">
-            <option value="Green">
-            <option value="Yellow">
-        </datalist>
-
-
-
-
-    <label for="colors2">Colors:</label>
-
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
-        <button type="button">Click me!</button>
-
-
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Preferences</legend>
+            <label for="pk-choice">Choose a Pokemon</label>
+            <input list="pk-opts" id="pk-choice" name="pk-choice">
+            <datalist id="pk-opts">
+                <option value="Pikachu">   
+                <option value="Jiggypuff">
+                <option value="Squirtle">   
+                <option value="Psyduck">  
+            </datalist>
+            <br><br>
+            <label for="colors2">Colors:</label>
+            <input list="colors2" id="color-choice" name="colors2">
+            <datalist id="colors2">
+                <option value="Red">
+                <option value="Blue">
+                <option value="Green">
+                <option value="Yellow">
+            </datalist>
+            <br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button">Click me!</button>
+        </fieldset>
     </form>
-
 </body>
 </html>
