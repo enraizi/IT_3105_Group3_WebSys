@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Profile Portal</title>
+<link rel="stylesheet" href="student_profile_portal.css">
+</head>
+<body>
+
+<header>
+  <h1>Alexander Joshua Collamar — Student Profile Portal</h1>
+  <p>Welcome to my personal academic dashboard. This portal presents my profile, academic record, and a contact/registration form for inquiries.</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#profile">Profile</a>
+  <a href="#grades">Grades</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="layout">
+
+  <aside>
+    <h2>Quick Notes</h2>
+    <p><strong>Name:</strong> Alexander Joshua Collamar</p>
+    <p><strong>Program:</strong> BS Information Technology</p>
+    <p><strong>Year Level:</strong> 3rd Year</p>
+    <p><strong>Status:</strong> <em>Active</em></p>
+    <hr>
+    <p>"Consistency beats intensity — small daily progress adds up."</p>
+  </aside>
+
+  <main id="home">
+
+    <section id="profile">
+      <h2>About Me</h2>
+      <p>
+        Hi, I'm <b>Alexander Joshua Collamar</b>, a third-year Information Technology student who enjoys
+        building small web projects in my free time. I would describe myself as
+        <span class="trait-span"><strong>productive</strong></span>,
+        <span class="trait-span"><em>adventurous</em></span>, and
+        <span class="trait-span"><i>detail-oriented</i></span>.
+      </p>
+      <p>
+        My academic goal this semester is to <strong>maintain a GPA above 1.75</strong> while
+        improving my skills in <em>front-end development</em>. Outside of class, I like
+        <i>going to the gym</i> and <b>enjoy cafe-hopping</b>.
+      </p>
+      <hr>
+      <p>
+        Fun fact: my favorite subject changes every semester, but right now it's
+        <span class="trait-span">Web Development</span> — mostly because of how quickly you can
+        see your work come to life in the browser.
+      </p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>Media &amp; Multimedia</h2>
+      <figure>
+        <img src="https://via.placeholder.com/350x220.png?text=Student+Photo" alt="Placeholder photo of student">
+        <figcaption>Fig. 1 — A placeholder photo representing my student ID picture.</figcaption>
+      </figure>
+    </section>
+
+    <hr>
+
+    <section id="grades">
+      <h2>Academic Record</h2>
+      <table border="1">
+        <caption>Semester Grades — 3rd Year, 1st Semester</caption>
+        <thead>
+          <tr>
+            <th>Student</th>
+            <th>Subject Code</th>
+            <th>Subject Title</th>
+            <th>Units</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="4">Alexander Joshua Collamar</td>
+            <td>IT101</td>
+            <td>Intro to Web Development</td>
+            <td>3</td>
+            <td>1.25</td>
+          </tr>
+          <tr>
+            <td>IT102</td>
+            <td>Database Management</td>
+            <td>3</td>
+            <td>1.50</td>
+          </tr>
+          <tr>
+            <td>IT103</td>
+            <td>Data Structures</td>
+            <td>3</td>
+            <td>1.75</td>
+          </tr>
+          <tr>
+            <td>GE104</td>
+            <td>Purposive Communication</td>
+            <td>3</td>
+            <td>1.00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total Units / Overall GPA</td>
+            <td>12</td>
+            <td>1.38</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <hr>
+
+    <section id="contact">
+      <h2>Registration / Feedback Form</h2>
+      <form action="/submit-profile" method="POST" enctype="multipart/form-data">
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Juan Dela Cruz" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="juan.delacruz@email.com" required>
+
+          <label for="phone">Telephone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="09XX-XXX-XXXX"
+                 pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" title="Format: 09XX-XXX-XXXX" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Academic Preferences</legend>
+
+          <label for="track">Course Track</label>
+          <select id="track" name="track">
+            <optgroup label="Computer Science">
+              <option value="cs_software">Software Engineering</option>
+              <option value="cs_ai">Artificial Intelligence</option>
+            </optgroup>
+            <optgroup label="Information Technology">
+              <option value="it_network">Network Administration</option>
+              <option value="it_web">Web &amp; Mobile Development</option>
+            </optgroup>
+          </select>
+
+          <label for="language">Favorite Programming Language</label>
+          <input type="text" id="language" name="language" list="language-options" placeholder="C++, JavaScript, Python, etc.">
+          <datalist id="language-options">
+            <option value="JavaScript">
+            <option value="Python">
+            <option value="Java">
+            <option value="C++">
+            <option value="PHP">
+          </datalist>
+        </fieldset>
+
+        <fieldset>
+          <legend>Elective Choices</legend>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="electives" value="webdev"> Web Development</label>
+            <label><input type="checkbox" name="electives" value="mobiledev"> Mobile App Development</label>
+            <label><input type="checkbox" name="electives" value="cybersecurity"> Cybersecurity Basics</label>
+            <label><input type="checkbox" name="electives" value="gamedev"> Game Development</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Information</legend>
+
+          <label for="message">Message / Feedback</label>
+          <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+
+          <label for="resume">Upload Resume / Portfolio</label>
+          <input type="file" id="resume" name="resume">
+        </fieldset>
+
+        <div class="form-buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  &copy; 2026 Alexander Joshua Collamar — Student Profile Portal. Created for Practice Activity 1 &amp; 2 (HTML &amp; CSS).
+</footer>
+
+</body>
+</html>
